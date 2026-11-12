@@ -15,14 +15,20 @@ def add_student(book, name):
     """Add a new student with an empty score list.
     If the student is already in the book, print a message and change nothing."""
     # TODO
-    pass
+    if name in book:
+        print(name, "is already in the grade book.")
+    else:
+        book[name] = []
 
 
 def add_grade(book, name, grade):
     """Add a score to a student's list.
     If the student is not in the book yet, add the student first, then the score."""
     # TODO
-    pass
+    if name not in book:
+        add_student(book, name)
+
+    book[name].append(grade)
 
 
 def student_average(book, name):
@@ -30,20 +36,34 @@ def student_average(book, name):
     Use .get() so this returns None instead of crashing
     if the student is not in the book."""
     # TODO
-    pass
+    scores = book.get(name)
+
+    if scores is None or len(scores) == 0:
+        return None
+
+    return sum(scores) / len(scores)
 
 
 def top_student(book):
     """Return the name of the student with the highest average score."""
     # TODO
-    pass
+    if not book:
+        return None
+
+    return max(
+        book,
+        key=lambda name: student_average(book, name)
+        if student_average(book, name) is not None else float("-inf")
+    )
 
 
 def print_report(book):
     """Print every student, their scores, and their average,
     one student per line. Loop over the dictionary with .items()."""
     # TODO
-    pass
+    for name, scores in book.items():
+        average = student_average(book, name)
+        print(f"{name}: {scores} Average: {average}")
 
 
 # ---------------- TEST CODE - DO NOT CHANGE BELOW THIS LINE ----------------

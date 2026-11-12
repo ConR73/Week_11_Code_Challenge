@@ -1,0 +1,61 @@
+**1.** A dictionary stores data as key-value pairs. Write one line of Python that creates a dictionary named `student` with the keys `"name"` and `"major"` and values of your choosing.
+
+Your answer:  student = {"name":"Terry","major":"Computer Science"}
+
+**2.** What is the output of this code?
+
+```python
+grades = {"quiz1": 85, "quiz2": 92, "quiz3": 78}
+print(grades["quiz2"])
+```
+
+Your answer: 92
+
+**3.** What is the difference between `grades["quiz4"]` and `grades.get("quiz4")` when the key `"quiz4"` does not exist in the dictionary?
+
+Your answer:  grades["quiz4"] produces an error while grades.get("quiz4") prints to "none"
+
+**4.** Write the line of code that adds a new key `"quiz4"` with the value 88 to the `grades` dictionary above. Then write the line that changes `"quiz1"` to 90.
+
+Your answer:  grades = {"quiz4":88,"quiz1":90}
+
+**5.** What do the dictionary methods `.keys()`, `.values()`, and `.items()` each return?
+
+Your answer: ".keys()" returns the key names of the dictionary. ".values()" returns the values associated with the keys in the dictionary. ".items()" returns both the key and the value paired together
+
+**6.** In one or two sentences each, explain the main difference between a list, a tuple, and a set. When would you choose each one?
+
+Your answer:
+List: An ordered, changeable collection that allows duplicate values. Created using square brackets []
+Tuple: An ordered, unchangeable collection that allows duplicate values. Created using parentheses ()
+Set: An unordered, changeable collection that does not allow duplicate values. Created using curly brackets {}
+
+
+**7.** True or false, and explain why: in Python, the expression `"quiz1" in grades` checks whether `"quiz1"` is one of the values in the dictionary.
+
+Your answer:
+False. In this code, "quiz1" in grades checks whether "quiz1" is a key in the dictionary. Since "quiz1" is a key, the expression returns True.
+
+**8.** What is the output of this code?
+
+```python
+student = {"name": "Alex", "courses": {"current": "CIS 105", "credits": 3}}
+print(student["courses"]["current"])
+```
+
+Your answer:  CIS 105
+
+
+**9.** Name two different ways to remove the key `"quiz3"` from the `grades` dictionary. What is one difference between them?
+
+Your answer:
+del grades["quiz3"]
+and
+grades.pop("quiz3")
+The difference is that "del" just removes the key and "pop" removes the key and returns the value.
+
+
+
+**10.** What does `len(grades)` return for the dictionary in Question 2, and what exactly is it counting?
+
+Your answer:  it would output 3 because it is counting the number of keys only
