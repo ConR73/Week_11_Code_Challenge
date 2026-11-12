@@ -1,3 +1,7 @@
+Name: Jonathan Waidell
+Section: CIS 105
+Date: Nov 11, 2026
+
 **1.** A dictionary stores data as key-value pairs. Write one line of Python that creates a dictionary named `student` with the keys `"name"` and `"major"` and values of your choosing.
 
 Your answer:  student = {"name":"Terry","major":"Computer Science"}
